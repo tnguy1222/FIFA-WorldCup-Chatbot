@@ -1,13 +1,17 @@
 ## Overview
 
-This is a web application that answers questions about the 2026 FIFA World Cup. It uses a Retrieval-Augmented Generation (RAG) pipeline to ground GPT-4 responses in freshly scraped data from official sources, keeping answers accurate and up-to-date.
+This is a web application that answers questions about the 2026 FIFA World Cup. It uses a Retrieval-Augmented Generation pipeline to ground GPT-4 responses in freshly scraped data from official sources, keeping answers accurate and up-to-date.
 
 ## Stack
 
 Framework: Next.js (App Router) , React 
+
 CSS: Tailwind CSS v4
+
 Vector DB: DataStax Astra DB
+
 AI: Vercel AI SDK, LangChain, OpenAI (gpt-4, text-embedding-3-small)
+
 Scraping data: Puppeteer
 
 ## Workflow 
