@@ -1,0 +1,223 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/global.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/* =========================
+   GLOBAL THEME
+========================= */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: radial-gradient(circle at top, #f3fbf6, #e8f4ee 60%);
+    color: #1a2b23;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+main {
+    width: 80vw;
+    height: 80vh;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 138, 77, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 0 30px rgba(0, 138, 77, 0.1);
+}
+
+/* =========================
+   CHAT SECTION
+========================= */
+section {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow-y: auto;
+}
+
+.start-text {
+    padding: 0 40px;
+    color: #5b6b62;
+    text-align: center;
+}
+
+/* =========================
+   FORM INPUT BAR
+========================= */
+form {
+    height: 60px;
+    width: 100%;
+    display: flex;
+
+    border-top: 1px solid rgba(0, 138, 77, 0.2);
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 16px 16px;
+}
+
+input.question-box {
+    width: 85%;
+    padding: 12px 14px;
+
+    font-size: 15px;
+    color: #1a2b23;
+
+    border: 1px solid rgba(0, 138, 77, 0.25);
+    background: #f6faf8;
+
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+input.question-box:focus {
+    outline: none;
+    border-color: #00a94f;
+    box-shadow: 0 0 10px rgba(0, 169, 79, 0.3);
+}
+
+/* SEND BUTTON */
+input[type=submit] {
+    width: 15%;
+    margin-left: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    background: linear-gradient(135deg, #00a94f, #006bb3);
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+input[type=submit]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 12px rgba(0, 169, 79, 0.4);
+}
+
+/* =========================
+   CHAT BUBBLES
+========================= */
+.bubble {
+    margin: 10px;
+    padding: 12px 14px;
+
+    font-size: 15px;
+    width: 80%;
+    text-align: left;
+
+    color: #1a2b23;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    backdrop-filter: blur(8px);
+}
+
+/* USER */
+.bubble.user {
+    margin-left: auto;
+
+    border-radius: 18px 18px 0 18px;
+
+    color: white;
+    background: linear-gradient(135deg, #00a94f, #007a58);
+}
+
+/* ASSISTANT */
+.bubble.assistant {
+    margin-right: auto;
+
+    border-radius: 18px 18px 18px 0;
+
+    background: #f2f6f4;
+    border: 1px solid rgba(0, 138, 77, 0.15);
+}
+
+/* =========================
+   SUGGESTION BUTTONS
+========================= */
+.prompt-suggestion-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prompt-suggestion-button {
+    margin: 6px;
+    padding: 8px 12px;
+
+    font-size: 14px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(0, 138, 77, 0.3);
+
+    background: #ffffff;
+    color: #1a2b23;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.prompt-suggestion-button:hover {
+    background: #ffc72c;
+    border-color: #ffc72c;
+    color: #1a2b23;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   LOADER (PITCH STYLE)
+========================= */
+.loader {
+    margin: 10px;
+    width: 60px;
+    aspect-ratio: 4;
+
+    background:
+            radial-gradient(circle closest-side, #00a94f 90%, transparent) 0 50%,
+            radial-gradient(circle closest-side, #ffc72c 90%, transparent) 50% 50%,
+            radial-gradient(circle closest-side, #006bb3 90%, transparent) 100% 50%;
+
+    background-size: calc(100%/3) 100%;
+    background-repeat: no-repeat;
+
+    animation: loading 1s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0% {
+        background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 100%;
+        opacity: 0.4;
+    }
+    33% {
+        background-size: calc(100%/3) 0%, calc(100%/3) 100%, calc(100%/3) 100%;
+        opacity: 0.7;
+    }
+    66% {
+        background-size: calc(100%/3) 100%, calc(100%/3) 0%, calc(100%/3) 100%;
+        opacity: 0.9;
+    }
+    100% {
+        background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 0%;
+        opacity: 0.4;
+    }
+}
+
